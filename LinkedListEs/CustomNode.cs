@@ -44,7 +44,7 @@ namespace LinkedListEs
                 return;
             }
             Node current = head;
-            for (int i = 0; current != null && i < position - 2; i++)
+            for (int i = 0; current != null && i < position - 1/*2*/; i++)
             {
                 current = current.Next;
             }
@@ -88,6 +88,36 @@ namespace LinkedListEs
             while (current != null)
             {
                 Console.Write($"{current.Data} -> ");
+                current = current.Next;
+            }
+            Console.WriteLine("NULL");
+        }
+
+        public void DisplayNumeriPari()
+        {
+            Node current = head;
+            Console.Write("Lista numeri pari: ");
+            while (current != null)
+            {
+                if (current.Data % 2 == 0)
+                {
+                    Console.Write($"{current.Data} -> ");
+                }
+                current = current.Next;
+            }
+            Console.WriteLine("NULL");
+        }
+
+        public void DisplayNumeriDispari()
+        {
+            Node current = head;
+            Console.Write("Lista numeri dispari: ");
+            while (current != null)
+            {
+                if (current.Data % 2 != 0)
+                {
+                    Console.Write($"{current.Data} -> ");
+                }
                 current = current.Next;
             }
             Console.WriteLine("NULL");

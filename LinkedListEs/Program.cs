@@ -11,10 +11,13 @@
                 lista.AddLast(r.Next(0,11));
             }
             lista.Display();
-            lista.AddToAPosition(15,2);
-            lista.Display();
-            lista.AddToAPosition(15,7);
-            lista.Display();
+            Console.WriteLine("aggiungi numero");
+            int numero = int.Parse(Console.ReadLine());
+            Console.WriteLine("aggiungi posizione");
+            int posizione = int.Parse(Console.ReadLine());
+            lista.AddToAPosition(numero,posizione);
+            lista.DisplayNumeriPari();
+            lista.DisplayNumeriDispari();
         }
     }
 }
